@@ -1,0 +1,19 @@
+<:Body>
+  <h3>Pages:</h3>
+  <ul class="pagination">
+    <li class="{{ if first_page }}disabled{{ end }}">
+      <a href="url_for_page(previous_page_number)">&laquo;</a>
+    </li>
+    {{ page_numbers.each do |page_number| }}
+      {{ if page_number.nil? }}
+        <li><a>...</a></li>
+      {{ else }}
+        <li class="{{ if current_page == page_number }}active{{ end }}">
+          <a href="{{ url_for_page(page_number) }}">{{ page_number }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+    <li class="{{ if last_page }}disabled{{ end }}">
+      <a e-click="next_page">&raquo;</a>
+    </li>
+  </ul>
