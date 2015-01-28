@@ -130,6 +130,7 @@ GEM
     volt-bootstrap (0.0.8)
     volt-bootstrap-jumbotron-theme (0.0.3)
     volt-fields (0.0.12)
+    volt-pagination (0.0.4)
     volt-sockjs (0.3.4.4)
       faye-websocket (~> 0.7.1)
       json
@@ -155,4 +156,5 @@ DEPENDENCIES
   volt (= 0.8.26)
   volt-bootstrap
   volt-bootstrap-jumbotron-theme
+  volt-pagination
   volt-user-templates
