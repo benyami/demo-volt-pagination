@@ -8,6 +8,18 @@ class MainController < Volt::ModelController
     # Add code for when the about view is loaded
   end
 
+  def per_page
+    15
+  end
+
+  def start_offset
+    (params._page.or(1).to_i * per_page)
+  end
+
+  def paged_articles
+    store._articles.skip(start_offset).limit(per_page)
+  end
+
   private
 
   # The main template contains a #template binding that shows another

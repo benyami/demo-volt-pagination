@@ -4,8 +4,9 @@
 <:Body>
   <h1>RSS Feed</h1>
 
-  {{ store._articles.each do |article| }}
+  {{ paged_articles.each do |article| }}
     <p>
       <a href="{{ article._link }}">{{ article._title }}</a>
     </p>
   {{ end }}
+  <:pagination total="{{ store._articles.size }}" per_page="{{ per_page }}" window="5" />
